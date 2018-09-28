@@ -18,7 +18,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+    $(LOCAL_PATH)/overlay\
+    vendor/aosp/overlay/CarrierConfig
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -110,8 +111,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     libbson \
-    Camera2 \
-    libgui_vendor \
+    GoogleCameraMod\
     camera.device@1.0-impl \
     camera.device@3.2-impl \
     android.hardware.camera.provider@2.4-impl \
